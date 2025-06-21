@@ -52,5 +52,11 @@
     document.getElementById("themeToggle").addEventListener("click", () => {
       document.body.classList.toggle("dark");
     });
+
+    // Flipkarten auf Touch / Click umdrehen
+    document.querySelectorAll(".flip-card").forEach(card => {
+      card.addEventListener("click", () => {
+        card.classList.toggle("flipped");
+    });
   });
 })();
