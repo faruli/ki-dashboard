@@ -337,3 +337,9 @@ body.dark .reference-section {
 body.dark .reference-section a {
   color: #90caf9;
 }
+
+
+/* Click-/Touch-Toggle */
+.flip-card.flipped .flip-inner {
+  transform: rotateY(180deg);
+}
