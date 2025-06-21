@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="ki_Dashboard.css" />
+  <script src="ki_Dashboard.js" defer></script>
+  <title>KI im Informationsmanagement</title>
+</head>
+<body>
+  <header>
+    <h1>Künstliche Intelligenz im Informationsmanagement</h1>
+    <p>Erkunde Chancen, Risiken und Anforderungen durch KI</p>
+  </header>
+
+  <main>
+    <!-- Flipkarten im Cloudclynix-Stil -->
+    <div class="card-grid">
+      <div class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <h3>Was sind die Chancen von KI?</h3>
+          </div>
+          <div class="flip-back">
+            <p>Künstliche Intelligenz ermöglicht effizientere 
+                Prozesse, bessere Entscheidungen und Innovationen. 
+                Besonders im Informationsmanagement kann KI z.B. 
+                durch automatisierte Datenanalyse, prädiktive Analytik oder 
+                Chatbots im Kundenservice, einen messbaren Mehrwert liefern. 
+                Große Unternehmen setzen KI bereits erfolgreich zur Prozessoptimierung 
+                und Produktinnovation ein.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <h3>Welche Risiken birgt KI?</h3>
+          </div>
+          <div class="flip-back">
+            <p>Zu den Risiken zählen Fehlentscheidungen durch Black-Box-Modelle, 
+                Abhängigkeit von KI-Anbietern, ungenaue Trainingsdaten und rechtliche 
+                Probleme. Ethische Aspekte und der Verlust menschlicher Kontrolle 
+                über kritische Systeme sind häufige Bedenken.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <h3>KI & Informationssicherheit?</h3>
+          </div>
+          <div class="flip-back">
+            <p>Mit zunehmender KI-Nutzung steigt die Angriffsfläche für Cyberangriffe. 
+                Systeme zur Informationssicherheit müssen daher proaktiv angepasst werden. 
+                Typische Risiken: Manipulation von Daten, Sabotage, Spionage, Diebstahl.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <h3>Wichtige Future Skills?</h3>
+          </div>
+          <div class="flip-back">
+            <p>Der Einsatz von KI verändert die Anforderungen an Fachkräfte. Neben IT-Kompetenz 
+                sind kritisches Denken, ethisches Bewusstsein, interdisziplinäres Arbeiten und 
+                Datenkompetenz gefragt. Das Konzept der „Future Skills“ ist essenziell 
+                für zukunftsfähige Bildung und berufliche Weiterentwicklung.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <h3>Was regelt der AI Act?</h3>
+          </div>
+          <div class="flip-back">
+            <p>Der europäische AI Act reguliert erstmals umfassend den Einsatz von KI-Systemen 
+                nach Risikoklassen. Unternehmen müssen bei "hochriskanten" Anwendungen besonders  
+                auf Transparenz, Nachvollziehbarkeit und Datenschutz achten.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <h3>KI & Nachhaltigkeit?</h3>
+          </div>
+          <div class="flip-back">
+            <p>KI kann helfen, Ressourcen effizienter zu nutzen - etwa durch Optimierung von 
+                Energieverbrauch in Rechenzentren oder Logistik. Gleichzeitig ist der Energiebedarf 
+                von KI-Modellen (z.B. bei Training großer Sprachmodelle) sehr hoch und stellt ein 
+                Problem für ökologische Nachhaltigkeit dar.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Farbmodus-Umschalter -->
+    <div class="theme-toggle-wrapper">
+      <button id="themeToggle">Farbmodus wechseln</button>
+    </div>
+
+    <!-- Quiz-Bereich mit 5 Fragen -->
+    <div class="quiz-section">
+      <h3>Teste dein Wissen zur KI</h3>
+      <form id="quizForm">
+
+        <!-- Frage 1: Chancen -->
+        <div class="quiz-options" data-correct="c" data-name="q1">
+          <p>1. Welche Aussage zu den Chancen von KI ist korrekt?</p>
+          <label><input type="radio" name="q1" value="a" />KI kann Prozesse effizienter gestalten.</label>
+          <label><input type="radio" name="q1" value="b" />KI ersetzt alle menschliche Kreativität.</label>
+          <label><input type="radio" name="q1" value="c" />KI kann Unternehmen bei Innovationen helfen.</label>
+        </div>
+
+        <!-- Frage 2: Future Skills -->
+        <div class="quiz-options" data-correct="a" data-name="q2">
+          <p>2. Welche Future Skill ist besonders wichtig für den Umgang mit KI?</p>
+          <label><input type="radio" name="q2" value="a" />Datenkompetenz</label>
+          <label><input type="radio" name="q2" value="b" />Handschriftliche Ausdruckskraft</label>
+          <label><input type="radio" name="q2" value="c" />Tabellenkalkulation</label>
+        </div>
+
+        <!-- Frage 3: Nachhaltigkeit -->
+        <div class="quiz-options" data-correct="b" data-name="q3">
+          <p>3. Was bedeutet Nachhaltigkeit im Kontext von KI?</p>
+          <label><input type="radio" name="q3" value="a" />Höchstmöglicher Energieverbrauch durch GPU-Nutzung</label>
+          <label><input type="radio" name="q3" value="b" />Energieeffizienz und Ressourcenschonung</label>
+          <label><input type="radio" name="q3" value="c" />Datenspeicherung ohne Begrenzung</label>
+        </div>
+
+        <!-- Frage 4: Risiken -->
+        <div class="quiz-options" data-correct="c" data-name="q4">
+          <p>4. Welche Aussage beschreibt ein Risiko von KI-Systemen?</p>
+          <label><input type="radio" name="q4" value="a" />KI ist immer 100% objektiv</label>
+          <label><input type="radio" name="q4" value="b" />KI-Systeme funktionieren ohne Training</label>
+          <label><input type="radio" name="q4" value="c" />Entscheidungen können durch Datenverzerrung beeinflusst werden</label>
+        </div>
+
+        <!-- Frage 5: AI Act -->
+        <div class="quiz-options" data-correct="a" data-name="q5">
+          <p>5. Was regelt der europäische AI Act?</p>
+          <label><input type="radio" name="q5" value="a" />Transparenz und Kontrolle bei Hochrisiko-KI</label>
+          <label><input type="radio" name="q5" value="b" />Werbekosten für KI-Plattformen</label>
+          <label><input type="radio" name="q5" value="c" />Designvorgaben für Roboterarme</label>
+        </div>
+
+        <button type="button" id="checkQuiz">Antworten überprüfen</button>
+        <button type="reset" id="resetQuiz">Zurücksetzen</button>
+        <div id="result"></div>
+      </form>
+    </div>
+
+    <!-- Team-Mitglieder (Dropdown) -->
+    <section class="team-section">
+        <details class="team-dropdown">
+            <summary>
+            <h3>Mitglieder - Team 2</h3>
+            </summary>
+            <ul class="team-list">
+            <li>Meriam El-Mohamad</li>
+            <li>Denis Pfeifle</li>
+            <li>Nils Rudolphi</li>
+            <li>Josephine Seemann</li>
+            <li>Mario Fix</li>
+            <li>Mohd Farooq Kamal Irshad</li>
+            </ul>
+        </details>
+    </section>
+
+    <!-- Literatur und Quellenverzeichnis -->
+     <section class="reference.section">
+      <h3>Literatur & Quellenverzeichnis</h3>
+      <ul>
+        <li><strong>Laudon, K. C. / Laudon, J. P. / Schoder, D.</strong>
+          (2010): <em>Wirtschaftsinformatik: Eine Einführung</em>. 
+          2. Aufl., München: Pearson Studium.</li>
+        <li><strong>Martine, Mario</strong> (2019): <em>Blackbox 
+          Algorithmus - Grundfragen einer Regulierung Künstlicher 
+          Intelligenz</em>. Baden-Baden: Nomos Verlag.</li>
+        <li><strong>BSI - Bundesamt für Sicherheit in der Informationstechnik</strong> (2021): 
+          <em>Künstliche Intelligenz - Sicherheitsbetrachtungen</em>, 
+          <a href="https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/KI_Sicherheitsbetrachtungen.pdf" 
+          target="_blank">bsi.bund.de</a></li>
+        <li><strong>BSI - Bundesamt für Sicherheit in der Informationstechnik</strong> (2021): 
+          <em>Künstliche Intelligenz - Sicherheitsbetrachtungen</em>, 
+          <a href="https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/KI_Sicherheitsbetrachtungen.pdf" 
+          target="_blank">bsi.bund.de</a></li>
+        <li><strong>Verordnung über künstliche Intelligenz (AI Act)</strong>: Finaler Text vom 13.03.2024, 
+          <a href="https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:52021PC0206" 
+          target="_blank">eur-lex.europa.eu</a></li>
+        <li><strong>AI Index Report 2023</strong>: Herausgegeben vom Stanford Institute for Human-Centered 
+          Artificial Intelligence (HAI) - vgl. auch IEA, 2023, 
+          <a href="https://aiindex.stanford.edu/report" 
+          target="_blank">aiindex.stanford.edu</a></li>
+      </ul>
+     </section>
+  </main>
+</body>
+</html>

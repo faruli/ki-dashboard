@@ -1,0 +1,339 @@
+/* Grundlayout */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f0f2f5;
+  color: #333;
+  transition: background-color 0.4s, color 0.4s;
+}
+
+header {
+  background: #2a9df4;
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Flipkarten (optional) */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.flip-card {
+  perspective: 1000px;
+}
+
+.flip-inner {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-front,
+.flip-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backface-visibility: hidden;
+  text-align: center;
+}
+
+.flip-front {
+  background-color: #ffffff;
+  color: #0d47a1;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.flip-back {
+  background-color: #2a9df4;
+  color: white;
+  transform: rotateY(180deg);
+  font-size: 1.05rem;
+}
+
+/* Quiz-Styling */
+.quiz-section {
+  max-width: 700px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.quiz-section h3 {
+  color: #0d47a1;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.quiz-options {
+  margin-bottom: 2rem;
+}
+
+.quiz-options p {
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #2a2a2a;
+}
+
+.quiz-options label {
+  display: block;
+  margin-bottom: 0.8rem;
+  font-size: 1.05rem;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.quiz-options input {
+  margin-right: 0.5rem;
+  transform: scale(1.1);
+}
+
+/* Buttons */
+button {
+  background-color: #2a9df4;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  margin: 0.5rem 0.5rem 0 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #1a6dcc;
+}
+
+#resetQuiz {
+  background-color: #ccc;
+  color: #333;
+}
+
+#resetQuiz:hover {
+  background-color: #999;
+}
+
+/* Ergebnis */
+#result {
+  margin-top: 1.5rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #0d47a1;
+  text-align: center;
+}
+
+/* Bewertung: Grün für richtig, Rot für falsch */
+.correct {
+  color: #00ff00 !important;
+  font-weight: bold;
+}
+
+.incorrect {
+  color: red !important;
+  font-weight: bold;
+}
+
+/* Dark Mode */
+body.dark {
+  background: #121212;
+  color: #ddd;
+}
+
+body.dark .quiz-section {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+body.dark .quiz-section,
+body.dark .flip-front {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+body.dark .flip-back {
+  background-color: #0d47a1;
+}
+
+body.dark button {
+  background-color: #444;
+}
+
+body.dark #resetQuiz {
+  background-color: #666;
+  color: #fff;
+}
+
+/* Theme-Schalter */
+.theme-toggle-wrapper {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .flip-inner {
+    height: 180px;
+  }
+
+  .flip-front,
+  .flip-back {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+
+  .quiz-section {
+    padding: 1.2rem;
+  }
+
+  .quiz-options label {
+    font-size: 1rem;
+  }
+
+  button {
+    width: 100%;
+    margin-bottom: 0.8rem;
+  }
+}
+
+/* Team-Box */
+.team-section {
+  max-width: 700px;
+  margin: 2rem auto;
+  background-color: #f8fafc;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  transition: background 0.3s ease;
+}
+
+.team-dropdown summary {
+  list-style: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #0d47a1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.team-dropdown summary::-webkit-details-marker {
+  display: none;
+}
+
+.team-dropdown[open] summary::after {
+  content: "▲";
+  font-size: 0.8rem;
+  color: #0d47a1;
+}
+
+.team-dropdown summary::after {
+  content: "▼";
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+  color: #0d47a1;
+}
+
+/* Liste der Mitglieder */
+.team-list {
+  list-style: none;
+  padding: 1rem 0 0 0;
+  margin: 0;
+}
+
+.team-list li {
+  padding: 0.4rem 0;
+  font-size: 1.05rem;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.team-list li span {
+  font-size: 1.2rem;
+}
+
+/* Dark Mode Support */
+body.dark .team-section {
+  background-color: #1e1e1e;
+}
+
+body.dark .team-dropdown summary,
+body.dark .team-dropdown summary::after,
+body.dark .team-list li {
+  color: #f0f0f0;
+}
+
+body.dark .team-list li {
+  border-color: #444;
+}
+
+/* Sichtbare Fragefarbe im Dark Mode */
+body.dark form#quizForm .quiz-options p {
+  color: #0d47a1 !important;
+}
+
+
+/* Literatur & Quellenverzeichnis */
+.reference-section {
+  max-width: 900px;
+  margin: 3rem auto;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.reference-section h3 {
+  color: #0d47a1;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.reference-section ul {
+  list-style-type: disc;
+  padding-left: 2rem;
+}
+
+.reference-section li {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+
+/* Dark Modus */
+body.dark .reference-section {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+body.dark .reference-section a {
+  color: #90caf9;
+}
