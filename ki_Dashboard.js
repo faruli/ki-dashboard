@@ -54,9 +54,10 @@
     });
 
     // Flipkarten auf Touch / Click umdrehen
-    document.querySelectorAll(".flip-card").forEach(card => {
+    document.querySelectorAll(".flip-card").forEach((card) => {
       card.addEventListener("click", () => {
         card.classList.toggle("flipped");
+        });
     });
   });
 })();
