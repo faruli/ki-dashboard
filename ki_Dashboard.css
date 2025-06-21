@@ -41,7 +41,8 @@ main {
   transform-style: preserve-3d;
 }
 
-.flip-card:hover .flip-inner {
+.flip-card:hover .flip-inner,
+.flip-card.flipped .flip-inner {
   transform: rotateY(180deg);
 }
 
@@ -336,10 +337,4 @@ body.dark .reference-section {
 
 body.dark .reference-section a {
   color: #90caf9;
-}
-
-
-/* Click-/Touch-Toggle */
-.flip-card.flipped .flip-inner {
-  transform: rotateY(180deg);
 }
